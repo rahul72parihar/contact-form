@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+    /* The image used */
+    background-image: url("../images/bg-image.svg");
+
+    /* Full height only use 100vh for development */
+   height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* sections max width is 810px */
+
+.navbar {
+    padding: 15px 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.info--contact {
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 1.2;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info--contact h1 {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.info--contact p {
+    font-size: 18px;
+}
+
+.contact--form {
+    color: #fff;
+    margin-top: 35px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 20px 20px;
+    /* other styles */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /*border: 1px solid rgba(255, 255, 255, 0.18);*/
+}
+label{
+    font-size: 12px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.group--form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*inputs*/
+.form--input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input--rounded{
+    background-color: #F8FAFC;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 16px;
+}
+.form--input  input{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: #F8FAFC;
+    color: #111729;
+    font-weight: bolder;
+    font-family: 'Be Vietnam Pro', sans-serif;font-family: 'Be Vietnam Pro', sans-serif;
+}
+.drop--down {
+    position: relative;
+    display: flex;
+    align-items: center;
+   
+}
+
+.details--size, .details--subject {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 10px;
+    left: 0px;
+    width: 100%;
+    position: absolute;
+    color: #000;
+    background-color: #F8FAFC;
+    bottom: -70px;
+    z-index: 100;
+}
+.details--subject{
+    bottom: -45px;
+}
+.details--size p:hover, .details--subject p:hover {
+    background-color: #f2f2f2;
+}
+.dp {
+    cursor: pointer;
+}
+
+.tg {
+    display: none;
+}

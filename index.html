@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/images/contact-form-icon.svg" alt="Logo">
+        </div>
+    </nav>
+    <div class="content">
+        <section class="info--contact">
+            <h1>Interested in our business pricing?</h1>
+            <p>Fill out the form to view details and we'll contact you as soon as possible.</p>
+        </section>
+        <section class="contact--form">
+            <form class="contact">
+                <div class="group--form">
+                    <div class="form--input">
+                        <label for="name">Name</label>
+                        <div class="input--rounded">
+                            <input type="text" id="name" name="name" placeholder="Ethan Johnson" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form--input">
+                        <label for="mail">Company Email</label>
+                        <div class="input--rounded">
+                            <input type="mail" id="mail" name="mail" placeholder="ethan@johnson.com" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group--form">
+                    <div class="form--input">
+                        <label for="size">Company Size</label>
+                        <div class="input--rounded drop--down ">
+                            <input onclick="toggle__details_size()" type="text" id="size" name="size" readonly placeholder="Company size" autocomplete="off">
+                            <img  onclick="toggle__details_size()" class="dp" src="./assets/images/Expand_down.svg" alt="arrow-down">
+                            <span class="details--size tg">
+                                <p onclick="set_sisze(this)" data-value="50-100 Employees">
+                                    50-100 Employees
+                                </p>
+                                <p onclick="set_sisze(this)" data-value="500-1000 Employees">
+                                    500-1000 Employees
+                                </p>
+                                <p onclick="set_sisze(this)" data-value="1000+Employees">
+                                    1000+ Employees
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form--input">
+                        <label for="subject">Subject</label>
+                        <div class="input--rounded drop--down ">
+                            <input onclick="toggle__details_subject()" type="text" id="subject" name="subject" readonly placeholder="Subject" autocomplete="off">
+                            <img  onclick="toggle__details_subject()" class="dp" src="./assets/images/Expand_down.svg" alt="arrow-down">
+                            <span class="details--subject tg">
+                                <p onclick="set_subject(this)" data-value="Building Landing pages">
+                                    Building Landing pages
+                                </p>
+                                <p onclick="set_subject(this)" data-value="Other">
+                                    Other
+                                </p>
+                               
+                            </span>
+                        </div>
+                    </div>
+
+                  
+
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+
+
+
+        // Sets the size of an element.
+
+        // Parameters:
+        // - ele: The element to set the size for.
+
+        // Returns: None.
+        function set_sisze(ele) {
+            console.log(ele.dataset.value);
+            document.querySelector('#size').value = ele.dataset.value;
+            toggle__details_size();
+        }
+        // Toggles the size of the details element.
+        function toggle__details_size() {
+            let details = document.querySelector('.details--size');
+            details.classList.toggle('tg');
+        }
+
+        // Sets the subject value based on the dataset value of the given element.
+        //
+        // Parameters:
+        // - ele: The element to extract the dataset value from.
+        //
+        // Returns: None
+        function set_subject(ele) {
+            console.log(ele.dataset.value);
+            document.querySelector('#subject').value = ele.dataset.value;
+            toggle__details_subject()
+        }
+        // Toggles the visibility of the subject details element.
+        function toggle__details_subject() {
+            let details = document.querySelector('.details--subject');
+            details.classList.toggle('tg');
+        }
+        
+    </script>
+</body>
+
+</html>
