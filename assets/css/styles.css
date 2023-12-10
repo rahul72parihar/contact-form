@@ -42,7 +42,8 @@ body {
     color: #FFFFFF;
     line-height: 1.2;
     display: flex;
-    width: 80%;
+    width: 350px;
+    max-width: 650px;
     flex-direction: column;
     gap: 16px;
 }
@@ -109,7 +110,22 @@ label {
     color: #111729;
     font-weight: bolder;
     font-family: 'Be Vietnam Pro', sans-serif;
+
+}
+
+.form--input select {
+    appearance: none;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    color: #111729;
+    font-weight: bolder;
     font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: transparent;
+    display: inline-block;
+    z-index: 100;
+    cursor: pointer;
 }
 
 .form--input textarea {
@@ -121,49 +137,20 @@ label {
     color: #111729;
     font-weight: bolder;
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-family: 'Be Vietnam Pro', sans-serif;
+
     resize: none;
 }
-
+.form--input img {
+    position: absolute;
+    right: 15px;
+    z-index: 0;
+}
 .drop--down {
     position: relative;
     display: flex;
     align-items: center;
-
 }
 
-.details--size,
-.details--subject {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 10px;
-    left: 0px;
-    width: 100%;
-    position: absolute;
-    color: #000;
-    background-color: #F8FAFC;
-    bottom: -70px;
-    z-index: 100;
-}
-
-.details--subject {
-    bottom: -45px;
-}
-
-.details--size p:hover,
-.details--subject p:hover {
-    background-color: #f2f2f2;
-}
-
-.dp {
-    cursor: pointer;
-}
-
-.tg {
-    display: none;
-}
 
 .btn {
     cursor: pointer;
@@ -224,9 +211,7 @@ label {
         padding: 0 30px;
     }
 
-    .info--contact {
-        width: 60%;
-    }
+   
 
     .info--contact h1 {
         font-size: 60px;
@@ -252,11 +237,16 @@ label {
         margin-top: 70px;
         max-width: 810px;
     }
-    .input--rounded{
+
+    .input--rounded {
         padding: 15px 20px;
     }
-    .primary{
-        padding:20px;
+
+    .primary {
+        padding: 20px;
         font-size: 20px;
+    }
+    .form--input img {
+        right: 20px;
     }
 }
