@@ -6,7 +6,7 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   background-position: center;
-  background-image: url("/assets/images/bg-image.svg");
+  background-image: url("../images/bg-image.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1em 5vw;
