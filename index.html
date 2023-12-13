@@ -12,6 +12,54 @@
       rel="stylesheet"
     />
   </head>
-
-  <body></body>
+  <body>
+    <!-- <img src="assets/images/bg-image.svg" alt="" /> -->
+    <img src="assets/images/contact-form-icon.svg" alt="" />
+    <div class="container">
+      <h1>Interested in our business pricing?</h1>
+      <h4>Fill out the form to view details and we'll contact you as soon as possible.</h4>
+      <form action="#">
+        <div class="row">
+          <label for="name">
+            Name
+            <input type="text" name="name" id="name" placeholder="Joe Shmow" required />
+          </label>
+          <label for="email">
+            Company Email
+            <input type="email" name="email" id="email" placeholder="Jalan Technology" required />
+          </label>
+        </div>
+        <div class="row">
+          <label for="size">
+            Company Size
+            <select name="size" id="size" required>
+              <option value="1">50-100 Employee</option>
+              <option value="2">100-500 Employee</option>
+              <option value="3">500-more Employee</option>
+            </select>
+          </label>
+          <label for="option">
+            Type of Bussiness
+            <select name="option" id="option" required>
+              <option value="1">Building Landing Page</option>
+              <option value="2">Building Complex Web Server</option>
+              <option value="3">Building custom software</option>
+            </select>
+          </label>
+        </div>
+        <label for="message">
+          Message
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+        </label>
+        <button type="submit">Contact</button>
+      </form>
+    </div>
+  </body>
 </html>
